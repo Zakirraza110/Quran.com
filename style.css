@@ -43,9 +43,9 @@ a.navbar-brand {
 .sec_one{
     background-color: #f4f9fc;
 }
-.content_one{
+/* .content_one{
     display: flex;
-}
+} */
 .content_one_p1 {
     padding-top: 9%;
 }

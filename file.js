@@ -1,6 +1,6 @@
 async function logMovies() {
     let id, chapter;
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 1; i <= 5; i++) {
         const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/${i}/${i}`);
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;

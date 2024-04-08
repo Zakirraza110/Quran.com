@@ -29,10 +29,13 @@ a {
     font-weight: 700;
 }
 
+.nav{
+    padding-top: 8px;
+}
+
 .nav_items {
     display: flex;
     padding-left: 5rem;
-    padding-top: 8px;
 }
 
 .nav_items li {
@@ -51,6 +54,13 @@ a {
 .nav_items li a:hover {
     color: black;
     text-decoration: underline !important;
+}
+
+.sec_i {
+    font-size: 26px;
+    color: white;
+    padding-top: 12px;
+    display: none !important;
 }
 
 /* ########## Section-One ########## */
@@ -306,7 +316,38 @@ ul.icons li {
 
 
 @media only screen and (max-width: 1200px) {
-    li.nav-item {
-        padding-left: 20px;
+    .nav_items {
+        display: flex;
+        padding-left: 3rem;
+    }
+    .nav_items li {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 990px){
+    .nav_items{
+        display: none;
+    }
+    .sec_i {
+        display: block !important;
+        position: relative;
+        left: 64%;
+    }
+}
+
+@media only screen and (max-width: 678px){
+    .sec_i {
+        left: 50%;
+    }
+}
+@media only screen and (max-width: 520px){
+    .sec_i {
+        left: 37%;
+    }
+}
+@media only screen and (max-width: 420px){
+    .sec_i {
+        left: 27%;
     }
 }

@@ -551,3 +551,13 @@ ul.icons li {
         width: 61%;
     }
 }
+
+
+/* audio */
+
+.audios2_down, .audios3_down, .audios4_down{
+    display: none !important;
+}
+.audios1_down {
+    color: white;
+}

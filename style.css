@@ -282,6 +282,7 @@ audio {
 .content_four h1 {
     color: #032642;
     font-weight: 700;
+    text-align: center;
 }
 
 .bx2 h4 {
@@ -295,6 +296,11 @@ audio {
     text-decoration: underline !important;
 }
 
+.boxes_5 i {
+    position: relative;
+    padding-top: 11%;
+    font-size: 26px;
+}
 
 /* ########## Footer ########## */
 
@@ -347,10 +353,11 @@ ul.icons li {
 
 @media only screen and (max-width: 990px) {
 
-    /* .header{
+    .header{
         position: fixed;
         width: 100%;
-    } */
+        z-index: 3;
+    }
     .nav_items {
         display: none;
     }

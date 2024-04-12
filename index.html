@@ -16,9 +16,27 @@
 
 <body>
 
-    <section class="header">
+    <!-- <div class="container"> -->        
+        <div id="nav_bx">
+            <div class="navigation_bar">
+            <a id="anker" href="index.html">QURAN PLAYER</a>
+            <i onclick="fun1()" class="fa-solid fa-xmark"></i>
+            </div>
+            <ul class="nav_items1">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="value.html">Values</a></li>
+                <li><a href="tafsir.html">Tafsir</a></li>
+                <li><a href="translation.html">Translation</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i>My Account</a></li>
+            </ul>
+        </div>
+    <!-- </div> -->
+
+    <section id="header" class="header">
         <div class="container">
-            <div class="content_header">
+            <div id="content_header" class="content_header">
                 <a href="index.html">QURAN PLAYER</a>
                 <div class="nav">
                     <ul class="nav_items">
@@ -31,7 +49,7 @@
                         <li><a href="login.html"><i class="fa-solid fa-user"></i>My Account</a></li>
                     </ul>
                 </div>
-                <i class="fa-solid fa-bars sec_i"></i>
+                <i id="menu_bar" onclick="fun()" class="fa-solid fa-bars sec_i"></i>
             </div>
         </div>
     </section>

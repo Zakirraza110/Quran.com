@@ -1,3 +1,5 @@
+// HOME PAGE AUDIO
+
 async function logMovies() {
     let id, chapter;
     for (let i = 1; i <= 5; i++) {
@@ -9,3 +11,16 @@ async function logMovies() {
     }
 }
 logMovies();
+
+// HEAD NAV
+
+let header=document.getElementById('header');
+let nav_manu=document.getElementById('nav_bx');
+function fun(){
+    header.style.display="none";
+    nav_manu.style.display="block";
+}
+function fun1(){
+    header.style.display="block";
+    nav_manu.style.display="none";
+}

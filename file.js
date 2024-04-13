@@ -17,12 +17,11 @@ logMovies();
 let header = document.getElementById('header');
 let nav_manu = document.getElementById('nav_bx');
 function fun() {
-    header.style.display = "none";
-    nav_manu.style.display = "block";
+    nav_manu.style.animation = "navi 1s linear forwards";
+
 }
 function fun1() {
-    header.style.display = "block";
-    nav_manu.style.display = "none";
+    nav_manu.style.animation = "navi1 1s linear forwards";
 }
 
 
@@ -49,6 +48,7 @@ function toggleUp1(){
     document.getElementById('down_arrow2_up').style.display='none';
     document.getElementById('down_arrow2').style.display='inline';
 }
+
 function toggledown2() {
     document.getElementById('audios3').style.display = 'block';
     document.getElementById('down_arrow3').style.display='none';
@@ -59,6 +59,7 @@ function toggleUp2(){
     document.getElementById('down_arrow3_up').style.display='none';
     document.getElementById('down_arrow3').style.display='inline';
 }
+
 function toggledown3() {
     document.getElementById('audios4').style.display = 'block';
     document.getElementById('down_arrow4').style.display='none';

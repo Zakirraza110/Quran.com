@@ -66,14 +66,32 @@ a {
 }
 
 #nav_bx {
-    position: relative;
+    position: fixed;
     color: white;
     padding: 2% 21px;
-    display: none;
     height: 100vh;
     background-color: #00b26a;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 4;
+    left: -100%;
 }
-
+@keyframes navi{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes navi1{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
 .navigation_bar {
     display: flex;
     align-items: center;

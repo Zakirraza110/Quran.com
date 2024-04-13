@@ -466,6 +466,10 @@ ul.icons li {
     .footer li a {
         font-size: 16px;
     }
+    .content_three {
+        padding: 15% 0 6% 0;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -500,6 +504,10 @@ ul.icons li {
     .content_footer .row .col-3 h3 {
         padding-top: 20px;
         font-size: 35px;
+    }
+
+    .content_three {
+        padding: 18% 0 6% 0;
     }
 }
 

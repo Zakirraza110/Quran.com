@@ -1,12 +1,10 @@
 // HOME PAGE AUDIO
 
 async function logMovies() {
-    let id, chapter;
     for (let i = 1; i <= 114; i++) {
-        const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/${i}/${i}`);
+        const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;
-        console.log(link);
         document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
     }
 }
@@ -29,44 +27,72 @@ function fun1() {
 
 function toggledown() {
     document.getElementById('audios1').style.display = 'block';
-    document.getElementById('down_arrow1').style.display='none';
-    document.getElementById('down_arrow1_up').style.display='inline';
+    document.getElementById('down_arrow1').style.display = 'none';
+    document.getElementById('down_arrow1_up').style.display = 'inline';
 }
-function toggleUp(){
+function toggleUp() {
     document.getElementById('audios1').style.display = 'none';
-    document.getElementById('down_arrow1_up').style.display='none';
-    document.getElementById('down_arrow1').style.display='inline';
+    document.getElementById('down_arrow1_up').style.display = 'none';
+    document.getElementById('down_arrow1').style.display = 'inline';
 }
 
 function toggledown1() {
     document.getElementById('audios2').style.display = 'block';
-    document.getElementById('down_arrow2').style.display='none';
-    document.getElementById('down_arrow2_up').style.display='inline';
+    document.getElementById('down_arrow2').style.display = 'none';
+    document.getElementById('down_arrow2_up').style.display = 'inline';
 }
-function toggleUp1(){
+function toggleUp1() {
     document.getElementById('audios2').style.display = 'none';
-    document.getElementById('down_arrow2_up').style.display='none';
-    document.getElementById('down_arrow2').style.display='inline';
+    document.getElementById('down_arrow2_up').style.display = 'none';
+    document.getElementById('down_arrow2').style.display = 'inline';
 }
 
 function toggledown2() {
     document.getElementById('audios3').style.display = 'block';
-    document.getElementById('down_arrow3').style.display='none';
-    document.getElementById('down_arrow3_up').style.display='inline';
+    document.getElementById('down_arrow3').style.display = 'none';
+    document.getElementById('down_arrow3_up').style.display = 'inline';
 }
-function toggleUp2(){
+function toggleUp2() {
     document.getElementById('audios3').style.display = 'none';
-    document.getElementById('down_arrow3_up').style.display='none';
-    document.getElementById('down_arrow3').style.display='inline';
+    document.getElementById('down_arrow3_up').style.display = 'none';
+    document.getElementById('down_arrow3').style.display = 'inline';
 }
 
 function toggledown3() {
     document.getElementById('audios4').style.display = 'block';
-    document.getElementById('down_arrow4').style.display='none';
-    document.getElementById('down_arrow4_up').style.display='inline';
+    document.getElementById('down_arrow4').style.display = 'none';
+    document.getElementById('down_arrow4_up').style.display = 'inline';
 }
-function toggleUp3(){
+function toggleUp3() {
     document.getElementById('audios4').style.display = 'none';
-    document.getElementById('down_arrow4_up').style.display='none';
-    document.getElementById('down_arrow4').style.display='inline';
+    document.getElementById('down_arrow4_up').style.display = 'none';
+    document.getElementById('down_arrow4').style.display = 'inline';
 }
+
+
+async function pdf() {
+    for (let j = 1; j <= 114; j++) {
+        const response = await fetch(`https://api.quran.com/api/v4/chapters/${j}`);
+        if (response) {
+
+            const feed = await response.json();
+            document.getElementById(`heading${j}`).innerText = feed?.chapter?.name_arabic;
+        } else {
+            document.getElementById('spinner').style.display = 'block'
+        }
+    }
+}
+
+pdf();
+
+
+const spinner = () => {
+
+}
+// for (let i = 1; i <= 114; i++) {
+//     const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
+//     const movies = await response.json();
+//     link = movies?.audio_file?.audio_url;
+//     (link);
+//     document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
+// }

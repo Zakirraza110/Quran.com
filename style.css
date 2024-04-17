@@ -76,22 +76,27 @@ a {
     z-index: 4;
     left: -100%;
 }
-@keyframes navi{
-    0%{
+
+@keyframes navi {
+    0% {
         left: -100%;
     }
-    100%{
+
+    100% {
         left: 0;
     }
 }
-@keyframes navi1{
-    0%{
+
+@keyframes navi1 {
+    0% {
         left: 0;
     }
-    100%{
+
+    100% {
         left: -100%;
     }
 }
+
 .navigation_bar {
     display: flex;
     align-items: center;
@@ -293,6 +298,7 @@ i.fa-user {
 
 .bx1 h2 {
     color: white;
+    font-size: 3rem;
 }
 
 audio {
@@ -466,10 +472,11 @@ ul.icons li {
     .footer li a {
         font-size: 16px;
     }
+
     .content_three {
         padding: 15% 0 6% 0;
     }
-    
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -588,6 +595,10 @@ ul.icons li {
     .content_three button {
         width: 61%;
     }
+
+    .bx1 h2 {
+        font-size: 2rem;
+    }
 }
 
 
@@ -613,9 +624,78 @@ ul.icons li {
     padding-left: 35px;
 }
 
-.audios1_down, .audios2_down, .audios3_down, .audios4_down {
+.audios1_down,
+.audios2_down,
+.audios3_down,
+.audios4_down {
     cursor: pointer;
 }
-#down_arrow1_up, #down_arrow2_up, #down_arrow3_up ,#down_arrow4_up{
+
+#down_arrow1_up,
+#down_arrow2_up,
+#down_arrow3_up,
+#down_arrow4_up {
+    display: none;
+}
+
+
+/* Documentation */
+
+.content_pdf {
+    text-align: center;
+}
+
+#down_arrow5,
+#down_arrow6,
+#down_arrow7,
+#down_arrow8 {
+    display: none;
+}
+
+#down_arrow8_up,
+#down_arrow7_up,
+#down_arrow6_up,
+#down_arrow5_up {
+    position: relative;
+}
+
+
+
+/* Spinner */
+
+.lds-dual-ring,
+.lds-dual-ring:after {
+    box-sizing: border-box;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6.4px solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spinner {
     display: none;
 }

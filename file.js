@@ -73,12 +73,15 @@ function toggleUp3() {
 async function pdf() {
     for (let j = 1; j <= 114; j++) {
         const response = await fetch(`https://api.quran.com/api/v4/chapters/${j}`);
-        if (response) {
+        const feed = await response.json();
+        if (feed) {
+            setTimeout(()=>{
+                document.getElementById(`heading${j}`).innerText = feed?.chapter?.name_arabic;
+                document.getElementById(`spinner${j}`).style.display = 'none';
 
-            const feed = await response.json();
-            document.getElementById(`heading${j}`).innerText = feed?.chapter?.name_arabic;
+            },10000)
         } else {
-            document.getElementById('spinner').style.display = 'block'
+            document.getElementById(`spinner${j}`).style.display = 'block';
         }
     }
 }

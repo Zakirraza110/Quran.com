@@ -79,7 +79,7 @@ async function pdf() {
                 document.getElementById(`heading${j}`).innerText = feed?.chapter?.name_arabic;
                 document.getElementById(`spinner${j}`).style.display = 'none';
 
-            },10000)
+            },1000)
         } else {
             document.getElementById(`spinner${j}`).style.display = 'block';
         }

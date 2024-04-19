@@ -87,15 +87,3 @@ async function pdf() {
 }
 
 pdf();
-
-
-const spinner = () => {
-
-}
-// for (let i = 1; i <= 114; i++) {
-//     const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
-//     const movies = await response.json();
-//     link = movies?.audio_file?.audio_url;
-//     (link);
-//     document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
-// }

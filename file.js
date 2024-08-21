@@ -10,18 +10,19 @@ async function logMovies() {
 }
 logMovies();
 
-// HEAD NAV
+// NAV
 
-let header = document.getElementById('header');
-let nav_manu = document.getElementById('nav_bx');
-function fun() {
-    nav_manu.style.animation = "navi 1s linear forwards";
+document.getElementById('menu_bar_open').addEventListener('click',openmenu=()=>{
+    document.getElementById('nav_items').style.top="13%";
+    document.getElementById('menu_bar_close').style.display="flex";
+    document.getElementById('menu_bar_open').style.display="none";
+})
 
-}
-function fun1() {
-    nav_manu.style.animation = "navi1 1s linear forwards";
-}
-
+document.getElementById('menu_bar_close').addEventListener('click',closemenu=()=>{
+    document.getElementById('nav_items').style.top="-74%";
+    document.getElementById('menu_bar_open').style.display="flex";
+    document.getElementById('menu_bar_close').style.display="none";
+})
 
 // Audio
 
@@ -87,3 +88,7 @@ async function pdf() {
 }
 
 pdf();
+
+// document.getElementById('bx1').getAttribute('div',class="lds-dual-ring")
+
+document.querySelectorAll(".bx").add

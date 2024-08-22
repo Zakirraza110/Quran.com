@@ -28,7 +28,7 @@
         <li><a href="value.html">Values</a></li>
         <li><a href="tafsir.html">Tafsir</a></li>
         <li><a href="translation.html">Translation</a></li>
-        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="Details.html">Details</a></li>
         <li><a href="login.html"><i class="fa-solid fa-user"></i>My Account</a></li>
       </ul>
     </div>
@@ -45,36 +45,27 @@
       <li><a href="value.html">Values</a></li>
       <li><a href="tafsir.html">Tafsir</a></li>
       <li><a href="translation.html">Translation</a></li>
-      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="Details.html">Documentation</a></li>
       <li><a href="login.html"><i class="fa-solid fa-user"></i>My Account</a></li>
     </ul>
   </nav>
 
-  <section class="sec_pdf">
-    <div class="container">
-      <div class="content_pdf">
-        <div class="pdf1">
-          <h1>Surah 1-30<i id="down_arrow5" class="fa-solid fa-chevron-down"></i>
-            <i id="down_arrow5_up" class="fa-solid fa-chevron-up"></i>
-          </h1>
-        </div>
-        <div class="pdf2">
-          <h1>Surah 31-60<i id="down_arrow6" class="fa-solid fa-chevron-down"></i>
-            <i id="down_arrow6_up" class="fa-solid fa-chevron-up"></i>
-          </h1>
-        </div>
-        <div class="pdf3">
-          <h1>Surah 61-90<i id="down_arrow7" class="fa-solid fa-chevron-down"></i>
-            <i id="down_arrow7_up" class="fa-solid fa-chevron-up"></i>
-          </h1>
-        </div>
-        <div class="pdf4">
-          <h1>Surah 91-114<i id="down_arrow8" class="fa-solid fa-chevron-down"></i>
-            <i id="down_arrow8_up" class="fa-solid fa-chevron-up"></i>
-          </h1>
-        </div>
-      </div>
-    </div>
+  <section class="sec_details">
+    <input id="innput" type="text" placeholder="Enter The Surah number Which You want To find details">
+    <button onclick="details()">Find</button> <br>
+    <p id="wrong"></p> <br>
+    <h5>Name:</h5>
+    <p id ="displayinfo1"></p><br>
+    <h5>English name:</h5>
+    <p id="displayinfo2"></p><br>
+    <h5>revelation_order:</h5>
+    <p id="displayinfo3"></p><br>
+    <h5>revelation_place:</h5>
+    <p id="displayinfo4"></p><br>
+    <h5>verses_count:</h5>
+    <p id="displayinfo5"></p><br>
+    <h5>Name Meaning:</h5>
+    <p id="displayinfo6"></p><br>
   </section>
 
   <section id="footer">

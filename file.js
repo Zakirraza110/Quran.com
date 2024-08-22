@@ -5,11 +5,11 @@ async function logMovies() {
         const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;
-        console.log(link);
+        // console.log(link);
         document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
     }
 }
-logMovies();
+// logMovies();
 
 // NAV
 
@@ -88,6 +88,33 @@ async function pdf() {
     }
 }
 
-pdf();
+// pdf();
 
 // document.getElementById('bx1').getAttribute('div',class="lds-dual-ring")
+
+async function details() {
+    let input=parseInt(document.getElementById("innput").value) ;
+    if(input>=1 && input<=114){
+        const response = await fetch(`https://api.quran.com/api/v4/chapters/${input}`);
+        const feed = await response.json();
+        document.getElementById('displayinfo1').innerHTML=(feed?.chapter?.name_arabic)
+        document.getElementById('displayinfo2').innerHTML=(feed?.chapter?.name_simple)
+        document.getElementById('displayinfo3').innerHTML=(feed?.chapter?.revelation_order)
+        document.getElementById('displayinfo4').innerHTML=(feed?.chapter?.revelation_place)
+        document.getElementById('displayinfo5').innerHTML=(feed?.chapter?.verses_count)
+        document.getElementById('displayinfo6').innerHTML=(feed?.chapter?.translated_name?.name)
+    }
+    else{
+        const response = await fetch(`https://api.quran.com/api/v4/chapters/${input}`);
+        const feed = await response.json();
+        document.getElementById("wrong").innerHTML="Wrong Input Your Input Must Be From 1 - 114";
+        document.getElementById("wrong").style.color="red";
+        innput.value="";
+        document.getElementById('displayinfo1').innerHTML=(feed?.chapter?.name_arabic)
+        document.getElementById('displayinfo2').innerHTML=(feed?.chapter?.name_simple)
+        document.getElementById('displayinfo3').innerHTML=(feed?.chapter?.revelation_order)
+        document.getElementById('displayinfo4').innerHTML=(feed?.chapter?.revelation_place)
+        document.getElementById('displayinfo5').innerHTML=(feed?.chapter?.verses_count)
+        document.getElementById('displayinfo6').innerHTML=(feed?.chapter?.translated_name?.name)
+    }
+}

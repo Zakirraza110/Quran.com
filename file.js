@@ -5,6 +5,7 @@ async function logMovies() {
         const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;
+        console.log(link);
         document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
     }
 }
@@ -12,16 +13,16 @@ logMovies();
 
 // NAV
 
-document.getElementById('menu_bar_open').addEventListener('click',openmenu=()=>{
-    document.getElementById('nav_items').style.top="13%";
-    document.getElementById('menu_bar_close').style.display="flex";
-    document.getElementById('menu_bar_open').style.display="none";
+document.getElementById('menu_bar_open').addEventListener('click', openmenu = () => {
+    document.getElementById('nav_items').style.top = "13%";
+    document.getElementById('menu_bar_close').style.display = "flex";
+    document.getElementById('menu_bar_open').style.display = "none";
 })
 
-document.getElementById('menu_bar_close').addEventListener('click',closemenu=()=>{
-    document.getElementById('nav_items').style.top="-74%";
-    document.getElementById('menu_bar_open').style.display="flex";
-    document.getElementById('menu_bar_close').style.display="none";
+document.getElementById('menu_bar_close').addEventListener('click', closemenu = () => {
+    document.getElementById('nav_items').style.top = "-74%";
+    document.getElementById('menu_bar_open').style.display = "flex";
+    document.getElementById('menu_bar_close').style.display = "none";
 })
 
 // Audio
@@ -76,11 +77,11 @@ async function pdf() {
         const response = await fetch(`https://api.quran.com/api/v4/chapters/${j}`);
         const feed = await response.json();
         if (feed) {
-            setTimeout(()=>{
+            setTimeout(() => {
                 document.getElementById(`heading${j}`).innerText = feed?.chapter?.name_arabic;
                 document.getElementById(`spinner${j}`).style.display = 'none';
 
-            },1000)
+            }, 1000)
         } else {
             document.getElementById(`spinner${j}`).style.display = 'block';
         }
@@ -90,5 +91,3 @@ async function pdf() {
 pdf();
 
 // document.getElementById('bx1').getAttribute('div',class="lds-dual-ring")
-
-document.querySelectorAll(".bx").add

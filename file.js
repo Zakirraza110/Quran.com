@@ -5,11 +5,10 @@ async function logMovies() {
         const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;
-        // console.log(link);
         document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
     }
 }
-// logMovies();
+logMovies();
 
 // NAV
 
@@ -88,9 +87,8 @@ async function pdf() {
     }
 }
 
-// pdf();
+pdf();
 
-// document.getElementById('bx1').getAttribute('div',class="lds-dual-ring")
 
 async function details() {
     let input=parseInt(document.getElementById("innput").value) ;

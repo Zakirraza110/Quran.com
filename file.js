@@ -8,7 +8,7 @@ async function logMovies() {
         document.getElementById(`aud${i}`).setAttribute("src", movies?.audio_file?.audio_url);
     }
 }
-// logMovies();
+logMovies();
 
 // NAV
 
@@ -87,7 +87,7 @@ async function pdf() {
     }
 }
 
-// pdf();
+pdf();
 
 
 async function details() {
@@ -117,7 +117,6 @@ async function details() {
     }
 }
 
-
 async function verses() {
     let list = document.querySelector("#surahs_here > h2");
     let list2=document.querySelector("#surahs_here > p")
@@ -128,6 +127,11 @@ async function verses() {
     let str = feed?.verses[0]?.text_indopak;
     let input_surah = document.getElementById('input_surah').value;
     if (input_surah >= 1 && input_surah <= 114) {
+        const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${input_surah}`);
+        const movies = await response.json();
+        link = movies?.audio_file?.audio_url;
+        document.getElementById('myaudios').setAttribute("src", movies?.audio_file?.audio_url);
+
         if(input_surah == 1){
             for (let i = 1; i <= 6; i++) {
                 str = str + " " + feed?.verses[i]?.text_indopak;
@@ -163,4 +167,13 @@ async function verses() {
         element.appendChild(wrong);
         element.appendChild(wrong1);
     }
+}
+
+function MyFonts(){
+    let font_style=document.getElementById('font_style').value;
+    let font_size=document.getElementById('font_size').value;
+    document.querySelector('#surahs_here > p').style.fontSize=font_size;
+    document.querySelector('#surahs_here > h2').style.fontSize=font_size;
+    document.querySelector('#surahs_here > p').style.fontFamily=font_style;
+    document.querySelector('#surahs_here > h2').style.fontFamily=font_style;
 }

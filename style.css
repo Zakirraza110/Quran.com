@@ -373,9 +373,8 @@ ul.icons {
         padding: 19px 0% 0px 0px;
     }
 
-    .hd2 {
-        padding: 0px 16%;
-        font-size: 40px;
+    .content_three {
+        padding: 13% 0px 0% 0;
     }
 
     .bx1 h2 {
@@ -385,16 +384,46 @@ ul.icons {
     audio {
         width: 90%;
     }
+
+    #sec_surah {
+        padding: 16% 0 !important;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .content_three {
+        padding: 17% 0px 0% 0;
+    }
+
     .hd2 {
         padding: 0px;
         font-size: 30px;
     }
 
     .footer_items ul {
-        gap: 15px;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    #sec_surah {
+        padding: 20% 0 !important;
+        text-align: start !important;
+    }
+
+    #content_surah input {
+        width: 16rem !important;
+    }
+
+    select {
+        width: 8rem !important;
+        padding: 9px 0 !important;
+    }
+
+    .sec_details {
+        padding: 22% 0 2% 0 !important;
+    }
+    .content_details input {
+        width: 60% !important;
     }
 }
 
@@ -433,6 +462,10 @@ ul.icons {
         padding: 15px 35px;
     }
 
+    .content_three {
+        padding: 25% 0px 0% 0;
+    }
+
     .hd2 {
         font-size: 29px;
     }
@@ -445,6 +478,26 @@ ul.icons {
     ul.icons {
         gap: 35px !important;
         flex-direction: row !important;
+    }
+
+    #sec_surah {
+        padding: 32% 0 !important;
+    }
+
+    #content_surah input {
+        width: 54% !important;
+    }
+
+    select {
+        width: 30% !important;
+    }
+
+    .sec_details {
+        padding: 40% 0 2% 0 !important;
+    }
+
+    .content_details input {
+        width: 43% !important;
     }
 }
 
@@ -543,24 +596,24 @@ ul.icons {
 }
 
 
-/* documentation */
+/* details */
 
 .sec_details {
-    padding: 8% 2%;
+    padding: 14% 0 2% 0;
     background-color: #f4f9fc;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.sec_details p {
+.content_details p {
     display: inline-block;
 }
 
-.sec_details h5 {
+.content_details h5 {
     display: inline-block;
     padding-bottom: 30px;
 }
 
-.sec_details input {
+.content_details input {
     width: 33%;
     padding: 9px 8px;
     border-radius: 10px;
@@ -581,7 +634,7 @@ ul.icons {
 
 .btn_same:hover {
     background-color: #00af63;
-    border: none;
+    border-color: transparent;
     color: white;
 }
 
@@ -590,11 +643,13 @@ ul.icons {
 /* Tafir */
 
 #sec_surah {
+    background-color: #f4f9fc;
+    text-align: center;
     padding: 10% 0;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}   
+}
 
 #sec_surah h1 {
     text-align: center;
@@ -603,7 +658,7 @@ ul.icons {
 }
 
 #content_surah input {
-    width: 33%;
+    width: 24rem;
     padding: 9px 8px;
     border-radius: 10px;
     outline: none;
@@ -611,6 +666,7 @@ ul.icons {
     background-color: transparent;
     color: black;
 }
+
 
 #surahs_here p {
     text-align: right;
@@ -622,11 +678,12 @@ ul.icons {
 }
 
 select {
-    padding: 10px;
-    margin-right: 20px !important;
     outline: none;
     border-radius: 10px;
     border: 1px solid black;
+    background-color: transparent;
+    width: 12rem;
+    padding: 9px 8px;
 }
 
 audio#myaudios {

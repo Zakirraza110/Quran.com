@@ -569,7 +569,7 @@ ul.icons {
     color: black;
 }
 
-.sec_details button {
+.btn_same {
     background-color: transparent;
     border: 1px solid black;
     color: black;
@@ -578,8 +578,42 @@ ul.icons {
     font-weight: 600;
 }
 
-.sec_details button:hover {
+.btn_same:hover {
     background-color: #00af63;
     border: none;
     color: white;
+}
+
+
+
+/* Tafir */
+
+#sec_surah {
+    padding: 10% 0;
+    position: relative;
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}   
+
+#sec_surah h1{
+    text-align: center;
+}
+
+#content_surah input {
+    width: 33%;
+    padding: 9px 8px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    background-color: transparent;
+    color: black;
+}
+
+#surahs_here p {
+    text-align: right;
+    letter-spacing: 1px;
+    white-space: break-spaces;
+    line-height: 33px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 26px;
 }

@@ -117,9 +117,10 @@ async function details() {
     }
 }
 
+
 async function verses() {
     let list = document.querySelector("#surahs_here > h2");
-    let list2=document.querySelector("#surahs_here > p")
+    let list2 = document.querySelector("#surahs_here > p")
     list.remove();
     list2.remove();
     const response = await fetch(`https://api.quran.com/api/v4/quran/verses/indopak`);
@@ -131,20 +132,29 @@ async function verses() {
         const movies = await response.json();
         link = movies?.audio_file?.audio_url;
         document.getElementById('myaudios').setAttribute("src", movies?.audio_file?.audio_url);
-
-        if(input_surah == 1){
-            for (let i = 1; i <= 6; i++) {
-                str = str + " " + feed?.verses[i]?.text_indopak;
+        for(let i=0 ; i<=6237 ;i++){
+            if(i>=0 && i<=1364){
+                if(input_surah==feed?.verses[i]?.verse_key[0]){
+                    str = str + " " + feed?.verses[i]?.text_indopak;
+                    console.log(feed?.verses[i]?.verse_key)
+                }
             }
-        }
-        else if(input_surah == 2){
-            for (let i = 7; i <= 292; i++) {
-                str = str + " " + feed?.verses[i]?.text_indopak;
+            else if(i>=1366 && i<=6147){
+                if(input_surah==feed?.verses[i]?.verse_key[0] + feed?.verses[i]?.verse_key[1]){
+                    str = str + " " + feed?.verses[i]?.text_indopak;
+                    console.log(feed?.verses[i]?.verse_key)
+                }
+            }
+            else if(i>=6148){
+                if(input_surah==feed?.verses[i]?.verse_key[0] + feed?.verses[i]?.verse_key[1] + feed?.verses[i]?.verse_key[2]){
+                    str = str + " " + feed?.verses[i]?.text_indopak;
+                    console.log(feed?.verses[i]?.verse_key)
+                }
             }
         }
         let element = document.getElementById("surahs_here");
         let para = document.createElement("p");
-        let node = document.createTextNode(str);
+        let node = document.createTextNode(str)
         para.appendChild(node);
         let heading = document.createElement("h2");
         let node2 = document.createTextNode(`Surah ${input_surah}:`);
@@ -169,11 +179,11 @@ async function verses() {
     }
 }
 
-function MyFonts(){
-    let font_style=document.getElementById('font_style').value;
-    let font_size=document.getElementById('font_size').value;
-    document.querySelector('#surahs_here > p').style.fontSize=font_size;
-    document.querySelector('#surahs_here > h2').style.fontSize=font_size;
-    document.querySelector('#surahs_here > p').style.fontFamily=font_style;
-    document.querySelector('#surahs_here > h2').style.fontFamily=font_style;
+function MyFonts() {
+    let font_style = document.getElementById('font_style').value;
+    let font_size = document.getElementById('font_size').value;
+    document.querySelector('#surahs_here > p').style.fontSize = font_size;
+    document.querySelector('#surahs_here > h2').style.fontSize = font_size;
+    document.querySelector('#surahs_here > p').style.fontFamily = font_style;
+    document.querySelector('#surahs_here > h2').style.fontFamily = font_style;
 }

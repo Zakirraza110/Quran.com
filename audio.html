@@ -19,27 +19,10 @@
 
   <nav>
     <div id="nav_bx">
-        <div class="navigation_bar">
-            <a id="anker" href="index.html">QURAN PLAYER</a>
-        </div>
-        <ul class="nav_items1">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="audio.html">Audio</a></li>
-            <li><a href="#"><abbr title="Comming Soon">Values</abbr></a></li>
-            <li><a href="tafsir.html">Tafsir</a></li>
-            <li><a href="#"><abbr title="Comming Soon">Translation</abbr></a></li>
-            <li><a href="Details.html">Details</a></li>
-            <li><a href="#"><abbr title="Comming Soon"><i class="fa-solid fa-user"></i>My Account</abbr></a></li>
-        </ul>
-    </div>
-
-    <div id="nav_bx1">
+      <div class="navigation_bar">
         <a id="anker" href="index.html">QURAN PLAYER</a>
-        <i id="menu_bar_open" class="fa-solid fa-bars sec_i"></i>
-        <i id="menu_bar_close" class="fa-solid fa-x sec_i"></i>
-    </div>
-
-    <ul id="nav_items">
+      </div>
+      <ul class="nav_items1">
         <li><a href="index.html">Home</a></li>
         <li><a href="audio.html">Audio</a></li>
         <li><a href="#"><abbr title="Comming Soon">Values</abbr></a></li>
@@ -47,17 +30,86 @@
         <li><a href="#"><abbr title="Comming Soon">Translation</abbr></a></li>
         <li><a href="Details.html">Details</a></li>
         <li><a href="#"><abbr title="Comming Soon"><i class="fa-solid fa-user"></i>My Account</abbr></a></li>
+      </ul>
+    </div>
+
+    <div id="nav_bx1">
+      <a id="anker" href="index.html">QURAN PLAYER</a>
+      <i id="menu_bar_open" class="fa-solid fa-bars sec_i"></i>
+      <i id="menu_bar_close" class="fa-solid fa-x sec_i"></i>
+    </div>
+
+    <ul id="nav_items">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="#"><abbr title="Comming Soon">Values</abbr></a></li>
+      <li><a href="tafsir.html">Tafsir</a></li>
+      <li><a href="#"><abbr title="Comming Soon">Translation</abbr></a></li>
+      <li><a href="Details.html">Details</a></li>
+      <li><a href="#"><abbr title="Comming Soon"><i class="fa-solid fa-user"></i>My Account</abbr></a></li>
     </ul>
-</nav>
+  </nav>
 
   <section class="sec_three" id="sec_three">
     <div class="container">
       <div class="content_three">
         <h1 class="hd2">Listen Holy Quran By Your Favourite Reciter</h1>
+        <div class="selector_recitor">
+          <select id="surah_recitor">
+            <option value="null">--select--</option>
+            <option value="1">Abdul Baset(mujawwad)</option>
+            <option value="2">Abdul Baset(murattal)</option>
+            <option value="3">Abdur Rahmaan(murattal)</option>
+            <option value="4">Abu Bakr Shatri(murattal)</option>
+            <option value="5">Hani Ar Rifai(murattal)</option>
+            <option value="6">Khalil Al Husary(murattal)</option>
+            <option value="7">Mishari Al Afasy(murattal)</option>
+            <option value="8">Siddiq Al Minshawi(mujawwad)</option>
+            <option value="9">Siddiq Minshawi(murattal)</option>
+            <option value="10">saud_ash Shuraym(murattal)</option>
+            <option value="11">Abdul Mohsin Al Qasim</option>
+            <option value="12">Khalil Al Husary(muallim)</option>
+            <option value="13">Saad Al Ghaamidi</option>
+            <option value="14">fares</option>
+            <option value="15">thubaity</option>
+            <option value="17">Sahl Yaaseen</option>
+            <option value="18">Salaah Bukhaatir</option>
+            <option value="19">Ahmed Ibn ali Al Ajamy</option>
+            <option value="20">Sodais And Shuraim</option>
+            <option value="21">Abdulazeez Al Ahmad</option>
+            <option value="22">Muhammad Ayyoob</option>
+            <option value="23">Tawfeeq Bin Saeed as Sawaaigh</option>
+            <option value="24">Abdullaah Alee Jaabir</option>
+            <option value="25">Madinah</option>
+            <option value="26">Mehysni</option>
+            <option value="28">Jibreen</option>
+            <option value="29">Makkah</option>
+            <option value="30">Madinah(2)</option>
+            <option value="31">Saad Al Ghaamidi(hidayah)</option>
+            <option value="32">Muhammad Jibreel(hidayah)</option>
+            <option value="33">Madinah(3)</option>
+            <option value="34">Makkah</option>
+            <option value="35">Saleh Al Taleb</option>
+            <option value="36">Shuraim</option>
+            <option value="39">Muhammad Ayub And Mikaal</option>
+            <option value="40">Abdul Wadood Haneef</option>
+            <option value="42">Shakir Qasami</option>
+            <option value="43">Salahbudair</option>
+            <option value="44">Aziz Ali</option>
+            <option value="45">Makkah</option>
+            <option value="46">Madinah</option>
+            <option value="47">Abdulbaset</option>
+            <option value="48">Shuraim</option>
+            <option value="49">Mishaari</option>
+            <option value="51">Maher</option>
+            <option value="53">Muhammad Alhaider</option>
+          </select>
+          <button onclick="recitor()" id="btn_recitor">Search</button>
+        </div>
 
         <div class="audios1_down bx1">
-          <h1>Surah 1-30<i id="down_arrow1" class="fa-solid fa-chevron-down" onclick="toggledown()"></i>
-            <i onclick="toggleUp()" id="down_arrow1_up" class="fa-solid fa-chevron-up"></i>
+          <h1>Surah 1-30<i id="down_arrow1" class="fa-solid fa-chevron-down" onclick="toggledown(1)"></i>
+            <i onclick="toggleUp(1)" id="down_arrow1_up" class="fa-solid fa-chevron-up"></i>
           </h1>
           <div id="audios1" class="audios1">
             <div class="lds-dual-ring" id="spinner1"></div>
@@ -128,8 +180,8 @@
         </div>
 
         <div class="audios2_down bx1">
-          <h1>Surah 31-60<i id="down_arrow2" class="fa-solid fa-chevron-down" onclick="toggledown1()"></i>
-            <i onclick="toggleUp1()" id="down_arrow2_up" class="fa-solid fa-chevron-up"></i>
+          <h1>Surah 31-60<i id="down_arrow2" class="fa-solid fa-chevron-down" onclick="toggledown(2)"></i>
+            <i onclick="toggleUp(2)" id="down_arrow2_up" class="fa-solid fa-chevron-up"></i>
           </h1>
           <div id="audios2" class="audios2">
             <h2 id="heading31"></h2>
@@ -196,8 +248,8 @@
         </div>
 
         <div class="audios3_down bx1">
-          <h1>Surah 61-90<i id="down_arrow3" class="fa-solid fa-chevron-down" onclick="toggledown2()"></i>
-            <i onclick="toggleUp2()" id="down_arrow3_up" class="fa-solid fa-chevron-up"></i>
+          <h1>Surah 61-90<i id="down_arrow3" class="fa-solid fa-chevron-down" onclick="toggledown(3)"></i>
+            <i onclick="toggleUp(3)" id="down_arrow3_up" class="fa-solid fa-chevron-up"></i>
           </h1>
           <div id="audios3" class="audios3">
             <h2 id="heading61"></h2>
@@ -264,8 +316,8 @@
         </div>
 
         <div class="audios4_down bx1">
-          <h1>Surah 91-114<i id="down_arrow4" class="fa-solid fa-chevron-down" onclick="toggledown3()"></i>
-            <i onclick="toggleUp3()" id="down_arrow4_up" class="fa-solid fa-chevron-up"></i>
+          <h1>Surah 91-114<i id="down_arrow4" class="fa-solid fa-chevron-down" onclick="toggledown(4)"></i>
+            <i onclick="toggleUp(4)" id="down_arrow4_up" class="fa-solid fa-chevron-up"></i>
           </h1>
           <div id="audios4" class="audios4">
             <h2 id="heading91"></h2>

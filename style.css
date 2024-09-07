@@ -542,6 +542,31 @@ ul.icons {
     display: none;
 }
 
+.selector_recitor {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 20px;
+    font-family: cursive;
+}
+
+select#surah_recitor {
+    padding: 10px 15px;
+    width: 26%;
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+}
+
+#btn_recitor {
+    padding: 12px 20px;
+    width: 9%;
+}
+
+#surah_recitor option {
+    background: white;
+    color: #032642;
+}
 
 /* Documentation */
 

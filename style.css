@@ -420,7 +420,7 @@ ul.icons {
         width: 16rem !important;
     }
 
-    select {
+    #content_surah select {
         width: 8rem !important;
         padding: 9px 0 !important;
     }
@@ -428,6 +428,7 @@ ul.icons {
     .sec_details {
         padding: 22% 0 2% 0 !important;
     }
+
     .content_details input {
         width: 60% !important;
     }
@@ -494,7 +495,7 @@ ul.icons {
         width: 54% !important;
     }
 
-    select {
+    #content_surah select {
         width: 30% !important;
     }
 
@@ -505,10 +506,27 @@ ul.icons {
     .content_details input {
         width: 43% !important;
     }
+
+    .selector_recitor {
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+    #surah_recitor {
+        width: 93% !important;
+    }
+
+    #btn_recitor {
+        margin: 0 auto;
+    }
 }
 
 
 /* audio */
+
+.sec_three {
+    font-family: cursive;
+}
 
 .audios1_down,
 .audios2_down,
@@ -547,20 +565,23 @@ ul.icons {
     align-items: baseline;
     justify-content: center;
     gap: 20px;
-    font-family: cursive;
+    flex-wrap: wrap;
 }
 
-select#surah_recitor {
+#surah_recitor {
     padding: 10px 15px;
-    width: 26%;
+    width: 200px;
     color: white;
     border: 1px solid white;
     font-size: 20px;
+    background-color: #032642;
+    border-radius: 11px;
+    outline: none;
 }
 
 #btn_recitor {
     padding: 12px 20px;
-    width: 9%;
+    outline: none;
 }
 
 #surah_recitor option {
@@ -708,7 +729,7 @@ select#surah_recitor {
     font-size: 26px;
 }
 
-select {
+#content_surah select {
     outline: none;
     border-radius: 10px;
     border: 1px solid black;
@@ -719,4 +740,35 @@ select {
 
 audio#myaudios {
     width: 100%;
+}
+
+/* Translation */
+
+.sec_translation {
+    padding: 12% 0;
+}
+
+.content_translation select {
+    width: 25%;
+    height: 37px;
+    border-radius: 11px;
+}
+
+.content_translation button {
+    padding: 5px 38px;
+    border: 1px solid white;
+    background-color: #00b571;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.content_translation button:hover{
+    background-color: white;
+    border: 1px solid #00b571;
+    color: #00b571;
+}
+
+#translation_content {
+    padding-top: 20px;
 }

@@ -18,11 +18,20 @@ surah_name();
 
 
 // Audios
+async function onlyone() {
+    for (let i = 1; i <= 114; i++) {
+        const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/1/${i}`);
+        const feed = await response.json();
+        document.getElementById(`aud${i}`).setAttribute("src", feed?.audio_file?.audio_url);
+    }
+}
+onlyone();
+
 async function recitor() {
-    let surah_recitor=document.getElementById('surah_recitor').value;
-    for( let i=1 ; i<=114 ; i++ ){
-        const response=await fetch(`https://api.quran.com/api/v4/chapter_recitations/${surah_recitor}/${i}`);
-        const feed=await response.json();
+    let surah_recitor = document.getElementById('surah_recitor').value;
+    for (let i = 1; i <= 114; i++) {
+        const response = await fetch(`https://api.quran.com/api/v4/chapter_recitations/${surah_recitor}/${i}`);
+        const feed = await response.json();
         document.getElementById(`aud${i}`).setAttribute("src", feed?.audio_file?.audio_url);
     }
 }
@@ -161,3 +170,60 @@ function MyFonts() {
     document.querySelector('#surahs_here > p').style.fontFamily = font_style;
     document.querySelector('#surahs_here > h2').style.fontFamily = font_style;
 }
+
+
+// Translation
+async function tafeer() {
+    let translation_input = document.getElementById('Ask_translation').value;
+    let ask_surah_no = document.getElementById('ask_surah_no').value;
+    let translation_content = document.getElementById('translation_content');
+    const response = await fetch(`https://api.quran.com/api/v4/quran/translations/${translation_input}`);
+    const feed = await response.json();
+    let translation_string = "";
+
+    if (translation_input == "NULL" || ask_surah_no == "NULL") {
+        translation_content.innerHTML = "Wrong Input Please select the Name from below";
+    }
+
+    else if (ask_surah_no == "ALL") {
+        for (let i = 0; i <= 6236; i++) {
+            let abc = feed?.translations[i]?.text;
+            translation_string = translation_string + abc;
+            translation_content.innerHTML = translation_string;
+        }
+    }
+
+    else {
+        if (ask_surah_no == 1) {
+            for (let j = 0; j <= 6; j++) {
+                let abc = feed?.translations[j]?.text;
+                translation_string = translation_string + abc;
+                translation_content.innerHTML = translation_string;
+            }
+        }
+        if (ask_surah_no == 2) {
+            let translation_string = feed?.translations[0]?.text;
+            for (let j = 7; j <= 193; j++) {
+                let abc = feed?.translations[j]?.text;
+                translation_string = translation_string + abc;
+                translation_content.innerHTML = translation_string;
+            }
+        }
+    }
+}
+
+
+// Translation Inputs
+async function showtrans() {
+    const response = await fetch(`https://api.quran.com/api/v4/resources/translations`);
+    const feed = await response.json();
+    for (let i = 0; i <= 125; i++) {
+        document.getElementById(`opt${i}`).innerHTML = feed?.translations[i]?.author_name + "(" + feed?.translations[i]?.language_name + ")";
+        document.getElementById(`opt${i}`).value = feed?.translations[i]?.id;
+    }
+    for (let j = 1; j <= 114; j++) {
+        document.getElementById(`n${j}`).innerHTML = j;
+        document.getElementById(`n${j}`).value = j;
+    }
+}
+showtrans();
